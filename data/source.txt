@@ -1,0 +1,61 @@
+DATA SOURCE
+
+Neil Paine NBA Elo archive; factual game-result columns only.
+
+Repository: https://github.com/Neil-Paine-1/NBA-elo
+Source file: https://github.com/Neil-Paine-1/NBA-elo/blob/37db89481b02cbdf5f7d0bc1e41271ebb11bd283/NBA%20Elo%202025%20-%20nba_elo.csv
+Source commit: 37db89481b02cbdf5f7d0bc1e41271ebb11bd283
+Source file Git blob SHA: 4752ac88d1d5e62c430914767e4e56d91560a5df
+Retrieved: 2026-09-29
+
+INCLUDED DATA
+
+Data file: games.csv
+Rows: 25295
+Seasons: 2004-05 through 2024-25 (season ending years 2005 through 2025)
+Data SHA-256: e625071eba27d8053815ceb2f1a2b5df3df336a60c75b8cbc393b3de25cfdb49
+Parent extraction SHA-256: 340d00a74ec5a69d23578eb682a5f9af7c682bf6190817b358a30b5e2064c1d8
+
+Columns: date, season, neutral, playoff, team1, team2, score1, score2, is_home.
+Keep rows with a blank or NA playoff field and one perspective per game:
+the home row, or the alphabetically first team on neutral courts.
+No Elo rating or forecast enters calibration.
+
+CALIBRATION SAMPLE
+
+Calibration excludes the two NBA Cup finals listed below, then keeps games
+where both teams have fewer than 25 previous regular-season games.
+Some source non-playoff rows are Play-In games; these are outside the
+early-season fitting window.
+
+Excluded NBA Cup finals, which do not count as regular-season games:
+
+2023-12-09: IND vs LAL
+https://www.nba.com/pacers/news/rewind-pacers-lakers-231209
+
+2024-12-17: MIL vs OKC
+https://www.nba.com/news/starting-5-dec-18-2024
+
+UPSTREAM LICENSE
+
+MIT License
+
+Copyright (c) 2024 Neil Paine
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
