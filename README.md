@@ -17,11 +17,10 @@ python plot.py --results build/recomputed --output build/figures
 ```
 
 This refits the strengths, generates the numerical results locally, and draws
-both graphs. Generated results are not included in the repository.
+both graphs. 
 
 The full run uses 300,000 simulated leagues and 10,000 additional strength
-profiles for the full-information bound. Seeds are fixed in the code and saved
-with the results. Use a new output directory for each simulation run.
+profiles for the full-information bound. 
 
 ## Method
 
@@ -30,7 +29,7 @@ with the results. Use a new output directory for each simulation run.
 played 25 regular-season games. Team log strengths have a normal distribution
 with fitted standard deviation 0.7031772846. The fit uses a Laplace approximation
 to the marginal likelihood and estimates home advantage separately. Early-season
-selection does not establish that the data are entirely free of tanking.
+selection does not establish that the data is entirely free of tanking.
 
 `simulate.py` draws fresh strengths for 30 teams in each simulated league. Both
 figures use these same strength draws and neutral-game Bradley-Terry outcomes.
